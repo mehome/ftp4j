@@ -1,12 +1,37 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-	<modelVersion>4.0.0</modelVersion>
-	<groupId>it.sauronsoftware.ftp4j</groupId>
-	<artifactId>ftp4j</artifactId>
-	<packaging>jar</packaging>
-	<version>1.7.2-fixed</version>
-	<name>ftp4j</name>
-	<url>http://www.sauronsoftware.it/projects/ftp4j/index.php</url>
-	
-    
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>it.sauronsoftware.ftp4j</groupId>
+    <artifactId>ftp4j</artifactId>
+    <packaging>jar</packaging>
+    <version>1.7.2-fixed</version>
+    <name>ftp4j</name>
+    <url>http://www.sauronsoftware.it/projects/ftp4j/index.php</url>
+
+
+    <distributionManagement>
+        <repository>
+            <id>9now</id>
+            <!--<url>http://localhost:8081/nexus/content/repositories/thirdparty/</url>-->
+            <url>http://114.80.88.52:9001/nexus/content/repositories/jichu/</url>
+        </repository>
+    </distributionManagement>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
 </project>
